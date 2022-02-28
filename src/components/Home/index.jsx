@@ -8,8 +8,6 @@ import { useDispatch, useSelector } from "react-redux";
 import {setLastTen} from '../../redux/slicer/recordsSlice';
 // router
 
-import { Link } from 'react-router-dom';
-// others
 
 import axios from 'axios';
 
@@ -60,3 +58,4 @@ export function Home() {
 };
 
 export default Home;
+

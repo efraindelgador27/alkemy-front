@@ -5,8 +5,7 @@ import {handleChange,handleSubmite} from '../../libs'
 
 function SigIn(props){
     const [fields,setFields]=useState({})
-    
-    const r={"pass": "123456ABc/","confirmPass": "123456ABc/","email": "qwe@qweee.com"}
+ 
     return(
         <div>
             <form onChange={(e)=>{handleChange(e,setFields,fields)}}>

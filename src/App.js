@@ -27,6 +27,3 @@ function App() {
 }
 
 export default App;
-
-
-// https://react-redux.js.org/tutorials/quick-start

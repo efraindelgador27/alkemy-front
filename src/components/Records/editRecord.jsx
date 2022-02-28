@@ -1,4 +1,3 @@
-import React,{Component} from 'react';
 import {useState}from 'react';
 import Input from '../Input';
 import {handleChange} from '../../libs'
@@ -7,9 +6,8 @@ import Choise from './Choise';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 //redux
 
-import {useSelector,useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 
-import {editRecord}from '../../redux/slicer/recordsSlice';
 
 import axios from 'axios';
 
@@ -18,7 +16,7 @@ import axios from 'axios';
 function EditRecord(props){  
   const userId=useSelector((state)=>state.identifier.user_id)
   const {id}=useParams()
-  const dispatch=useDispatch();
+
 
   const cuerpo={
     monto:0,
@@ -31,7 +29,7 @@ function EditRecord(props){
   const [fields,setFields]=useState(cuerpo);
 
   const history=useHistory();
-  
+
   const handleSubmite=async function(e){
     e.preventDefault();
     
