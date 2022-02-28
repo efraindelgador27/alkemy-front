@@ -1,0 +1,27 @@
+.input{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin: 0.5em;
+
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+}
+
+.inputElement{
+
+    margin: 0.5em;
+}
+.inputButton{
+    width: 50%;
+    color:rgb(240, 214, 122);
+    background-color: rgb(161, 13, 13);
+    margin: 0.3em;
+    border-radius: 10px;
+}.inputButton:hover{
+
+    background-color: rgb(245, 24, 8);
+    color: white;
+}
