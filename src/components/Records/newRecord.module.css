@@ -1,0 +1,23 @@
+.container{
+    max-width: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    align-items: flex-start;
+   
+}
+
+.btnAdd{
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    transition: 0.8s;            
+}   
+.btnAdd:hover{
+    transition: 0.8s;            
+    background-color: rgb(44, 117, 202);
+    color:white;
+    box-shadow: 0px 0px 4px  rgb(44, 117, 202);
+}

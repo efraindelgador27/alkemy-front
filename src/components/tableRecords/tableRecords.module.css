@@ -1,0 +1,39 @@
+.container{
+    width: 100%;
+    padding: 50px 20px 10px 20px;   
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+}
+ .table{
+    padding-top: 30px;
+    width: 100%;
+  
+}
+
+.gasto{
+    color:red
+}
+
+.ingreso{
+    color:green
+}
+
+.container td{
+    border: 1px solid grey;
+  
+}
+
+.container thead{
+    background-color: rgb(168, 166, 166);
+}
+
+.panel{
+    
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: last space-between;
+    align-items: center;
+}

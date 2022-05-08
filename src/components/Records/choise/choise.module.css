@@ -1,0 +1,16 @@
+.container{
+    padding: 0px 10px;
+    min-width: 250px;
+    max-height: 50px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;  
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px rgb(182, 176, 176);   
+    color: rgb(25, 110, 220);
+}
+
+.container select {
+    max-width: 60%;
+}

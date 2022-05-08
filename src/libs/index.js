@@ -6,7 +6,8 @@ export async  function handleSubmite(e,fields,URl){
   console.log(fields)
   await axios.post(URl,fields)
   .then((res)=>{     
-    user=res.data;      
+    user=res.data;    
+    console.table(user)  
   })
   .catch((err)=>{console.log(err)})
   return user;

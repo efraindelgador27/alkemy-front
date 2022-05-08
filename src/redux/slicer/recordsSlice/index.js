@@ -1,29 +1,40 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const recordsSlice=createSlice({
     name:'records',
     initialState:{
-        records:[]},
+        records:[],        
         lastTen:[],
+        balance:0,        
+    },
+       
+        
     reducers:{
-        setAllRecords:(state,action)=>{
-            console.log(`Data dending: ${action.payload}`)
-            state.records=action.payload;            
-        },        
-        setLastTen:(state,action)=>{
-            state.lastTen=action.payload
-        },
-        addRecord:(state,action)=>{
-            state.records=[...state,action.payload]
-        },
+        setAllRecords:(state,action)=>{                
+            state.records=[...action.payload];                     
+        },                    
+
         editRecord:(state,action)=>{
-           const r= state.records.filters((record)=>record.id=action.payload.id)[0];
-           console.log(r)
+           const noSelectedRecord= state.records.filter((R)=>R.id!==action.payload.editedRecord.id);           
+        
+           state.records=[...noSelectedRecord,action.payload.editedRecord]
         },
+        deleteRecord:(state,action)=>{
+            const noSelectedRecord= state.records.filter((R)=>R.id!==action.payload.id);               
+            state.records=[...noSelectedRecord];
+        },
+        setBalance:(state,action)=>{
+            let total=0;
+            action.payload.forEach(element => {
+                element.tipo==="gasto"?total-=parseInt(element.monto):total+=parseInt(element.monto);
+            });
+            state.balance=total
+        }
     }
+
 });
 
 export default recordsSlice.reducer;
 
-export const{setAllRecords,editRecord,addRecord,setLastTen}=recordsSlice.actions;
+export const{setAllRecords,editRecord,addRecord,deleteRecord,setBalance, setToken}=recordsSlice.actions;
  

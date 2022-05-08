@@ -1,10 +1,11 @@
-import React,{Component} from 'react';
-
+import style from './index.module.css';
+import { useState } from 'react';
 function Input(props){
+    const [initialValue,setInitialValue]=useState(props.config.value?props.config.value:undefined);
     return(
-        <div class="mb-3">
-            <label className="form-label">{props.config.title}</label>
-            <input className="form-control" type={props.config.type} name={props.config.name} />
+        <div className={`${style.inputBox} ${props.err?style.err:""}`}>
+            <label >{props.config.title}</label>
+            <input className={style.input} type={props.config.type} name={props.config.name} onChange={(e)=>{if(props.CB){props.CB(e)};setInitialValue(e.target.value)}} value={initialValue}/>
         </div>
     )
 }

@@ -1,27 +1,42 @@
-.input{
+.inputBox{
+    min-width: 280px;
+    height: 35px;
+    padding: 0px 7px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-
     margin: 0.5em;
-
-    border: 2px solid darkgrey;
-    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgb(182, 176, 176);   
+    border-radius: 15px;
+    background-color: white;
+    color: rgb(25, 110, 220);
+}
+.inputBox:hover{
+    
+    transition: 0.5s;
+    box-shadow: 0px 0px 7px rgb(235, 233, 233);   
+}
+.input{
+    max-width: 220px;  
+    border: 0;   
+    cursor:text;
+}
+.input:focus{
+    background-color: rgb(230, 230, 230);
+    border: 0;   
 }
 
-.inputElement{
-
-    margin: 0.5em;
+@media(max-width:800px){
+    .input{   
+        font-size: 0.8em;
+    }
 }
-.inputButton{
-    width: 50%;
-    color:rgb(240, 214, 122);
-    background-color: rgb(161, 13, 13);
-    margin: 0.3em;
-    border-radius: 10px;
-}.inputButton:hover{
 
-    background-color: rgb(245, 24, 8);
-    color: white;
+.err{
+    box-shadow: 0px 0px 8px rgb(255, 0, 0); 
+}
+
+.err:hover{
+    box-shadow: 0px 0px 8px rgb(255, 0, 0); 
 }
